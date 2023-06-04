@@ -1,7 +1,5 @@
 package Functions;
 
-import java.util.Scanner;
-
 public class OperationsBasics {
     public static int sumar(int a, int b){
         int resultado = a + b;
@@ -18,20 +16,19 @@ public class OperationsBasics {
         System.out.println("El producto es: " + resultado);
         return resultado;
     }
-    public static int dividir(int a, int b){
-        int resultado = a / b;
-        System.out.println("El cociente es: " + resultado);
+    public static int dividir(int a, int b){ //Alt + 124, para barra vertical
+        int resultado = 0;
+        try {
+            resultado = a / b;
+            System.out.println("El cociente es: " + resultado);
+        }catch (Exception e){
+            System.out.println("El valor es indeterminado");
+        }
         return resultado;
     }
     public static int residuo(int a, int b){
         int resultado = a % b;
         System.out.println("El residuo es : " + resultado);
         return resultado;
-    }
-    public static int leerDatos(){
-        Scanner leer = new Scanner(System.in);
-        System.out.println("Ingrese un numero:");
-        int num = leer.nextInt();
-        return num;
     }
 }
